@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" role="img" aria-label="Blanke Logistik">
+  <rect width="1200" height="320" fill="#efefef"/>
+  <g fill="#bdbdbd" opacity="0.95">
+    <rect x="22" y="88" width="58" height="18" rx="9"/>
+    <rect x="52" y="124" width="68" height="18" rx="9"/>
+    <rect x="34" y="160" width="76" height="18" rx="9"/>
+    <rect x="6" y="196" width="52" height="18" rx="9"/>
+    <rect x="58" y="232" width="64" height="18" rx="9"/>
+    <rect x="108" y="88" width="74" height="18" rx="9"/>
+    <rect x="132" y="124" width="54" height="18" rx="9"/>
+    <rect x="120" y="160" width="88" height="18" rx="9"/>
+    <rect x="140" y="196" width="52" height="18" rx="9"/>
+    <rect x="102" y="232" width="82" height="18" rx="9"/>
+    <rect x="150" y="268" width="70" height="18" rx="9"/>
+  </g>
+  <g fill="#0f4a84">
+    <path d="M240 52h160c77 0 118 35 118 91 0 35-18 59-49 72 41 12 64 40 64 82 0 67-51 111-138 111H240v-62h138c52 0 77-18 77-53 0-33-24-49-72-49H260v-57h118c44 0 66-14 66-43 0-28-21-40-61-40H240V52z"/>
+    <rect x="184" y="92" width="118" height="18" rx="9"/>
+    <rect x="162" y="132" width="106" height="18" rx="9"/>
+    <rect x="180" y="172" width="122" height="18" rx="9"/>
+    <rect x="146" y="212" width="142" height="18" rx="9"/>
+    <rect x="196" y="252" width="124" height="18" rx="9"/>
+  </g>
+  <text x="560" y="168" font-family="Arial, Helvetica, sans-serif" font-size="104" font-style="italic" font-weight="800" fill="#0f4a84">BLANKE</text>
+  <text x="560" y="244" font-family="Arial, Helvetica, sans-serif" font-size="80" font-style="italic" font-weight="300" letter-spacing="7" fill="#8f8f8f">LOGISTIK</text>
+</svg>

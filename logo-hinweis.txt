@@ -1,0 +1,1 @@
+Diese Version enthält ein direkt eingebundenes Logo als Datei logo.svg im Hauptordner.

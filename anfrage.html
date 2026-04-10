@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anfrage – Blanke Logistik</title>
+  <meta name="description" content="Blanke Logistik – Umzüge, Möbeltransporte und Transportanfragen mit moderner Preisberechnung." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="topbar">
+  <div class="container nav">
+    <a class="brand" href="index.html">
+      <img src="logo.svg" alt="Blanke Logistik" class="brand-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+      <span class="brand-fallback" style="display:none;">Blanke Logistik</span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html">Start</a>
+      <a href="leistungen.html">Leistungen</a>
+      <a href="ueber-uns.html">Über uns</a>
+      <a href="anfrage.html" class="active">Anfrage</a>
+      <a href="kontakt.html">Kontakt</a>
+      <a href="impressum.html">Impressum</a>
+    </nav>
+  </div>
+</header>
+
+
+<main>
+  <section class="section">
+    <div class="container">
+      <div class="panel">
+        <div class="eyebrow">Anfrageformular</div>
+        <h1>Transport direkt anfragen</h1>
+        <p class="lead">Die Entfernung kann automatisch berechnet werden. Anschließend wird der Preis direkt angezeigt: 1,90 € pro Kilometer plus 50 € Verpackungsmaterial.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container contact-grid">
+      <article class="panel">
+        <form id="transportForm">
+          <div class="form-grid">
+            <div class="field">
+              <label for="name">Name</label>
+              <input id="name" type="text" placeholder="Vor- und Nachname" required />
+            </div>
+            <div class="field">
+              <label for="email">E-Mail</label>
+              <input id="email" type="email" placeholder="name@example.de" required />
+            </div>
+
+            <div class="field-full">
+              <label>Welche Möbelstücke sollen transportiert werden?</label>
+              <div class="checkbox-grid">
+                <label class="check-item"><input type="checkbox" name="items" value="Sofa" /> Sofa</label>
+                <label class="check-item"><input type="checkbox" name="items" value="Schrank" /> Schrank</label>
+                <label class="check-item"><input type="checkbox" name="items" value="Bett" /> Bett</label>
+                <label class="check-item"><input type="checkbox" name="items" value="Waschmaschine" /> Waschmaschine</label>
+                <label class="check-item"><input type="checkbox" name="items" value="Kühlschrank" /> Kühlschrank</label>
+                <label class="check-item"><input type="checkbox" name="items" value="Tisch" /> Tisch</label>
+                <label class="check-item"><input type="checkbox" name="items" value="Stühle" /> Stühle</label>
+                <label class="check-item"><input type="checkbox" name="items" value="Kommode" /> Kommode</label>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="customItems">Weitere Möbel / Hinweise</label>
+              <input id="customItems" type="text" placeholder="z. B. Kartons, Fernseher, Spiegel" />
+            </div>
+            <div class="field">
+              <label for="weight">Gesamtgewicht</label>
+              <select id="weight" required>
+                <option value="">Bitte auswählen</option>
+                <option value="bis 100 kg">bis 100 kg</option>
+                <option value="100 - 300 kg">100 - 300 kg</option>
+                <option value="300 - 500 kg">300 - 500 kg</option>
+                <option value="500 - 1000 kg">500 - 1000 kg</option>
+                <option value="über 1000 kg">über 1000 kg</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="pickup">Einladeort</label>
+              <input id="pickup" type="text" placeholder="Straße, Hausnummer, Ort" required />
+            </div>
+            <div class="field">
+              <label for="dropoff">Abladeort</label>
+              <input id="dropoff" type="text" placeholder="Straße, Hausnummer, Ort" required />
+            </div>
+
+            <div class="field">
+              <label for="distance">Entfernung in Kilometern</label>
+              <input id="distance" type="number" min="0" step="0.1" placeholder="wird automatisch oder manuell eingetragen" required />
+            </div>
+            <div class="field">
+              <label for="phone">Telefonnummer</label>
+              <input id="phone" type="tel" placeholder="Für Rückfragen" />
+            </div>
+
+            <div class="field-full">
+              <label for="message">Zusätzliche Informationen</label>
+              <textarea id="message" placeholder="z. B. Etage, Aufzug vorhanden, empfindliche Gegenstände, Wunschdatum"></textarea>
+            </div>
+          </div>
+
+          <div class="actions" style="margin-top:18px;">
+            <button type="button" class="btn btn-secondary" id="routeBtn">Entfernung automatisch berechnen</button>
+          </div>
+          <div class="helper" id="routeStatus"></div>
+
+          <div class="price-box">
+            <div class="price-main">
+              <div>
+                <div class="small">Aktuell berechneter Gesamtpreis</div>
+                <div class="price-number" id="priceOutput">50,00 €</div>
+              </div>
+              <div class="small" id="priceDetails">0,0 km × 1,90 € + 50,00 € Verpackungsmaterial</div>
+            </div>
+          </div>
+
+          <div class="actions" style="margin-top:20px;">
+            <button type="submit" class="btn btn-primary">Anfrage absenden</button>
+            <button type="button" class="btn btn-secondary" id="resetBtn">Formular leeren</button>
+          </div>
+          <div class="notice">
+            Die automatische Streckenberechnung nutzt in dieser Version einen freien Karten-/Routendienst. Für eine professionelle Google-Maps-Lösung mit höherer Zuverlässigkeit kann später ein eigener API-Schlüssel eingebunden werden.
+          </div>
+        </form>
+      </article>
+
+      <aside class="panel">
+        <div class="eyebrow">Kurzinformation</div>
+        <h2>So wird gerechnet</h2>
+        <div class="contact-list">
+          <div class="contact-line"><strong>Kilometerpreis</strong><br />1,90 € pro Kilometer</div>
+          <div class="contact-line"><strong>Verpackungsmaterial</strong><br />50,00 € pauschal</div>
+          <div class="contact-line"><strong>Automatische Entfernung</strong><br />Per Adress- und Routenberechnung direkt im Formular</div>
+          <div class="contact-line"><strong>Versand</strong><br />Die Anfrage wird als E-Mail an rayhil@freenet.de vorbereitet</div>
+        </div>
+      </aside>
+    </div>
+  </section>
+</main>
+
+
+<footer class="footer">
+  <div class="container">© <span id="year"></span> Blanke Logistik • Raimund Hilscher & Markus Blanke</div>
+</footer>
+<script src="script.js"></script>
+
+</body>
+</html>
